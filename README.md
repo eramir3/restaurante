@@ -13,13 +13,17 @@ El proyecto fue creado bajo las siguientes caracteristicas:
 # Pasos para importar la aplicacion
 1. Importarla en un IDE i.e Eclipse
 2. Crear base de datos con el nombre de restaurante
-3. En el archivo application.properties indicar la ip y el puerto de conexion de la base de datos
+3. En el archivo application.properties indicar la ip y el puerto de conexion de la base de datos. Por defecto esta 
+
+spring.datasource.url=jdbc:postgresql://127.0.0.1:5432/restaurante
+
 4. Correr la aplicacion como una Java Application en Eclipse
 5. Correr el archivo inserts.sql para ingresar informacion de los entidades que hace parte de la aplicacion (mesas, camareros, cocineros, etc.)
 6. Interactuar con la aplicacion
 
 # Pasos para desplegar la aplicacion
 1. Se creo el archivo lamejorcocina.war
+2. Se debe crear la base de datos y correr los scripts como se menciona en el paso anterior.
 2. El archivo debe ser cargado en un servidor, por ejemplo tomcat y bajo la url localhost:8080/lamejorcocina/clientes/list comprobar que funcionamiento de la misma
 3. En el archivo .war adjunto en el archivo application.properties se encuentra la linea 
 
