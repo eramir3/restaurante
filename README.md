@@ -30,3 +30,11 @@ spring.datasource.url=jdbc:postgresql://127.0.0.1:5432/restaurante
 spring.datasource.url=jdbc:postgresql://127.0.0.1:5432/restaurante
 
 Que indica la ip, el puerto y el nombre de la base de datos por defecto
+
+
+# Uso de la aplicacion
+La aplicacion cuenta con 4 menus: 
+1. El primero es Registrar factura donde se puede registrar la factura relacionada a un cliente. Es necesario haber cargado los scripts del archivo inserts.sql para poder ver correctamente las listas de lo cocineros, camareros y mesas. Al crear una factura se crea un nuevo cliente por defecto.
+2. El segundo menu es la creacion de clientes. Estos clientes no son necesarios para crear las facturas.
+3. El tercer menu es el de consulta clientes, el cual muestra los clientes que han gastado mas de 100,000 pesos al realizar un pedido.
+4. El cuarto menu es consulta camareros el cual muestra el total facturado de los camareros para el 2019. Para una correcta funcionalidad de esta consulta no se deben realizar facturas con fechas diferentes a las del año en curso.
