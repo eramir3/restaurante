@@ -17,7 +17,6 @@ El proyecto fue creado bajo las siguientes caracteristicas:
 3. En el archivo application.properties indicar la ip y el puerto de conexion de la base de datos. Por defecto esta 
 
 spring.datasource.url=jdbc:postgresql://127.0.0.1:5432/restaurante
- composer install
 
 4. Correr la aplicacion como una Java Application en Eclipse. Esta se correra bajo la URL localhost:8080
 5. Correr el archivo inserts.sql para ingresar la informacion de las entidades que hacen parte de la aplicacion (mesas, camareros, cocineros, etc.)
