@@ -25,6 +25,11 @@ CREATE DATABASE restaurante;
 spring.datasource.url=jdbc:postgresql://127.0.0.1:5432/restaurante
 ```
 
+El archivo application.properties se encuentra en la direccion
+```
+lamejorcocina/src/main/resources/application.properties
+```
+
 4. Correr la aplicacion como una Java Application en Eclipse para mapear las entidades a la base de datos. Esta se correra bajo la URL 
 ```
 localhost:8080
