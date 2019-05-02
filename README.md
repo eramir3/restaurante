@@ -3,22 +3,23 @@ Restaurante la mejor cocina prueba conexa
 
 # Caracteristicas del Proyecto
 El proyecto fue creado bajo las siguientes caracteristicas:
-  - Front-end: Thymeleaf
+  - Front-end: Thymeleaf y Ajax
   - Back-end: Java Spring Boot
   - Bases de Datos: Postgresql
   - ORM: Hibernate
   - Arquitectura REST
-  - Patron DAO y servicios
+  - Patron de diseño DAO y servicios
+  - Maven
 
 # Pasos para importar la aplicacion
-1. Importarla en un IDE i.e Eclipse
+1. Importarla en un IDE (ej. Eclipse) como un proyecto Maven
 2. Crear base de datos con el nombre de restaurante
 3. En el archivo application.properties indicar la ip y el puerto de conexion de la base de datos. Por defecto esta 
 
 spring.datasource.url=jdbc:postgresql://127.0.0.1:5432/restaurante
 
-4. Correr la aplicacion como una Java Application en Eclipse
-5. Correr el archivo inserts.sql para ingresar informacion de los entidades que hace parte de la aplicacion (mesas, camareros, cocineros, etc.)
+4. Correr la aplicacion como una Java Application en Eclipse. Esta se correra bajo la URL localhost:8080
+5. Correr el archivo inserts.sql para ingresar la informacion de las entidades que hacen parte de la aplicacion (mesas, camareros, cocineros, etc.)
 6. Interactuar con la aplicacion
 
 # Pasos para desplegar la aplicacion
@@ -30,6 +31,7 @@ spring.datasource.url=jdbc:postgresql://127.0.0.1:5432/restaurante
 spring.datasource.url=jdbc:postgresql://127.0.0.1:5432/restaurante
 
 Que indica la ip, el puerto y el nombre de la base de datos por defecto
+4. La URL de la aplicacion es localhost:8080/lamejorcocina/clientes/list
 
 
 # Uso de la aplicacion
