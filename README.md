@@ -4,7 +4,7 @@ Restaurante la mejor cocina prueba conexa
 # Caracteristicas del Proyecto
 El proyecto fue creado bajo las siguientes caracteristicas:
   - Front-end: Thymeleaf y Ajax
-  - Back-end: Java Spring Boot
+  - Back-end: Java Spring Boot con manejo de dependencias
   - Bases de Datos: Postgresql
   - ORM: Hibernate
   - Arquitectura REST
