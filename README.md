@@ -20,7 +20,7 @@ El proyecto fue creado bajo las siguientes caracteristicas:
 spring.datasource.url=jdbc:postgresql://127.0.0.1:5432/restaurante
 ```
 
-4. Correr la aplicacion como una Java Application en Eclipse. Esta se correra bajo la URL 
+4. Correr la aplicacion como una Java Application en Eclipse para mapear las entidades a la base de datos. Esta se correra bajo la URL 
 ```
 localhost:8080
 ```
@@ -34,8 +34,9 @@ localhost:8080
 3. El archivo debe ser cargado en un servidor, por ejemplo tomcat y bajo la url 
 
 ```
-localhost:8080/lamejorcocina/clientes/list comprobar que funcionamiento de la misma
+localhost:8080/lamejorcocina/clientes/list 
 ```
+para comprobar que funcionamiento de la misma
 
 4. En el archivo .war adjunto en el archivo application.properties se encuentra la linea 
 
