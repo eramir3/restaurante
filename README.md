@@ -14,6 +14,11 @@ El proyecto fue creado bajo las siguientes caracteristicas:
 # Pasos para importar la aplicacion
 1. Importarla en un IDE (ej. Eclipse) como un proyecto Maven
 2. Crear base de datos con el nombre de restaurante
+
+```
+CREATE DATABASE restaurante;
+```
+
 3. En el archivo application.properties indicar la ip y el puerto de conexion de la base de datos. Por defecto esta 
 
 ```
@@ -31,24 +36,22 @@ localhost:8080
 # Pasos para desplegar la aplicacion
 1. Se creo el archivo lamejorcocina.war
 2. Se debe crear la base de datos y correr los scripts como se menciona en el paso anterior.
-3. El archivo debe ser cargado en un servidor, por ejemplo tomcat y bajo la url 
 
 ```
-localhost:8080/lamejorcocina/clientes/list 
+CREATE DATABASE restaurante;
 ```
-para comprobar que funcionamiento de la misma
-
-4. En el archivo .war adjunto en el archivo application.properties se encuentra la linea 
+3. En el archivo .war adjunto en el archivo application.properties se encuentra la linea 
 
 ```
 spring.datasource.url=jdbc:postgresql://127.0.0.1:5432/restaurante
 ```
 
-Que indica la ip, el puerto y el nombre de la base de datos por defecto
+Que indica la ip, el puerto y el nombre de la base de datos por defecto. Si es necesario se deben cambiar la ip y el puerto y generar un nuevo .war para correr la aplicacion.
 
-5. La URL de la aplicacion es 
+4. El archivo debe ser cargado en un servidor, por ejemplo tomcat y para comprobar el funcionamiento de la misma se ingresa a la url 
+
 ```
-localhost:8080/lamejorcocina/clientes/list
+localhost:8080/lamejorcocina/clientes/list 
 ```
 
 # Uso de la aplicacion
