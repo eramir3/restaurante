@@ -13,7 +13,6 @@ $( document ).ready(function() {
 });
 
 
-
 function saveFactura() {
 	
 	var config = {};
@@ -29,13 +28,6 @@ function saveFactura() {
 	});
 	
 	console.log(config);
-	
-	/*
-	let formData = getFormData($("#facturaForm"));
-	
-	console.log($("#facturaForm").serialize());
-	console.log(JSON.stringify(formData));
-	*/
 
 	$.ajax({
 		type : "POST",
@@ -47,6 +39,7 @@ function saveFactura() {
 			
 			if (result.status == "200") {
 				alert('La factura ha sido creada con exito!');
+				limpiarCampos();
 			} 
 			else {
 				alert('Error!');
@@ -59,48 +52,11 @@ function saveFactura() {
 	});
 }
 
-/*
-function getFormData($form){
-    var unindexed_array = $form.serializeArray();
-    var indexed_array = {};
-
-    $.map(unindexed_array, function(n, i){
-        indexed_array[n['name']] = n['value'];
-    });
-
-    return indexed_array;
-}
-*/
 
 function agregarPlato() {
 	
-	/*
-	let nuevoPlato = $("#infoPlato-0").clone();
-	nuevoPlato.attr("id", "infoPlato-" + numeroPlatoAdicional);
-	nuevoPlato.append(`
-			<div class="col-3 mb-4">
-				<button type="button" class="btn btn-danger" id="btnEliminarPlato-`+numeroPlatoAdicional+`" onclick="eliminarPlato('infoPlato-`+numeroPlatoAdicional+`')">Eliminar</button>
-			</div>`
-			);
-	*/
-	
-	
-	/*
 	let nuevoPlato = `
-		<div class="row" id="infoPlato-`+numeroPlatoAdicional+`">
-			<div class="col-3 mb-4">
-				<input type="text" class="form-control" placeholder="Plato" name="nombrePlato[`+numeroPlatoAdicional+`]">
-			</div>
-			<div class="col-3 mb-4">
-				<input type="number" class="form-control" placeholder="Importe" name="importePlato[`+numeroPlatoAdicional+`]">
-			</div>
-			
-		</div>
-	`;
-	*/
-	
-	let nuevoPlato = `
-		<div class="row" id="infoPlato-`+numeroPlatoAdicional+`">
+		<div class="row infoPlato" id="infoPlato-`+numeroPlatoAdicional+`">
 			<div class="col-3 mb-4">
 				<input type="text" class="form-control" placeholder="Plato" name="nombrePlato[]" required>
 			</div>
@@ -118,6 +74,21 @@ function agregarPlato() {
 	numeroPlatoAdicional++;
 }
 
+
 function eliminarPlato(id) {
 	$("#"+id).remove();
+}
+
+
+function limpiarCampos() {
+	
+	$("#nombreCliente").val("");
+	$("#apellido1Cliente").val("");
+	$("#apellido2Cliente").val("");
+	$("#observacionesCliente").val(""); 
+	$("#plato1").val("");
+	$("#importe1").val("");
+	$(".infoPlato").each(function() {
+		$(this).remove();
+	});
 }

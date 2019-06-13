@@ -39,7 +39,8 @@
 				<td th:text="${tempCliente[0]}" />	
 				<td th:text="${tempCliente[1]}" />	
 				<td th:text="${tempCliente[2]}" />
-				<td th:text="${tempCliente[3]}" />	
+				<!-- <td th:text="${tempCliente[3]}" />  -->
+				<td>$ <span th:text="${#numbers.formatDecimal(tempCliente[3], 0, 'COMMA', 0, 'POINT')}"></span></td>	
 				
 			</tr>
 		</tbody>		

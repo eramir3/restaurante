@@ -67,7 +67,7 @@ public class CamareroDAOImpl implements CamareroDAO {
 		
 		Session currentSession = entityManager.unwrap(Session.class);
 				
-		Query<Object> theQuery = currentSession.createNativeQuery(FIND_BY_SAL_RNG);
+		Query<Object> theQuery = currentSession.createNativeQuery(FIND_CAMAREROS);
 				
 		List<Object> camareros = theQuery.getResultList();
 				

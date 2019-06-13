@@ -6,7 +6,7 @@ import com.restaurante.lamejorcocina.entity.Camarero;
 
 public interface CamareroDAO {
 
-	public String FIND_BY_SAL_RNG = "SELECT camarero.nombre, camarero.apellido1, camarero.apellido2, SUM(detalle_factura.importe) AS total_facturado,\n" + 
+	public String FIND_CAMAREROS = "SELECT camarero.nombre, camarero.apellido1, camarero.apellido2, SUM(detalle_factura.importe) AS total_facturado,\n" + 
 			"	SUM(CASE WHEN fecha_factura >= '2019-01-01' AND fecha_factura <= '2019-01-31' \n" + 
 			"		THEN detalle_factura.importe ELSE 0 END) AS enero,\n" + 
 			"	SUM(CASE WHEN fecha_factura >= '2019-02-01' AND fecha_factura <= '2019-02-28' \n" + 
@@ -32,8 +32,8 @@ public interface CamareroDAO {
 			"	SUM(CASE WHEN fecha_factura >= '2019-12-01' AND fecha_factura <= '2019-12-31' \n" + 
 			"		THEN detalle_factura.importe ELSE 0 END) AS diciembre\n" + 
 			"FROM camarero\n" + 
-			"JOIN factura ON factura.camarero_id = camarero.id\n" + 
-			"JOIN detalle_factura ON detalle_factura.factura_id = factura.id\n" + 
+			"LEFT JOIN factura ON factura.camarero_id = camarero.id\n" + 
+			"LEFT JOIN detalle_factura ON detalle_factura.factura_id = factura.id\n" + 
 			"GROUP BY camarero.id";
 	
 	public List<Camarero> findAll();

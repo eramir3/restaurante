@@ -29,7 +29,7 @@
 				<th>Nombre</th>
 				<th>Primer Apellido</th>
 				<th>Segundo Apellido</th>
-				<th>Total Facturado</th>
+				<th>Total Facturado</strong></th>
 				<th>Enero</th>
 				<th>Febrero</th>
 				<th>Marzo</th>
@@ -51,7 +51,7 @@
 				<td th:text="${camarero[1]}" />	
 				<td th:text="${camarero[2]}" />
 				<!-- <td th:text="${camarero[3]}" /> -->	
-				<td>$ <span th:text="${#numbers.formatDecimal(camarero[3], 0, 'COMMA', 0, 'POINT')}"></span></td>
+				<td><strong>$ <span th:text="${#numbers.formatDecimal(camarero[3], 0, 'COMMA', 0, 'POINT')}"></span></strong></td>
 				<td>$ <span th:text="${#numbers.formatDecimal(camarero[4], 0, 'COMMA', 0, 'POINT')}"></span></td>
 				<td>$ <span th:text="${#numbers.formatDecimal(camarero[5], 0, 'COMMA', 0, 'POINT')}"></span></td>
 				<td>$ <span th:text="${#numbers.formatDecimal(camarero[6], 0, 'COMMA', 0, 'POINT')}"></span></td>

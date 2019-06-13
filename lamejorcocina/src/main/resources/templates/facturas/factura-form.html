@@ -142,18 +142,18 @@
 	  			
 	  			<div class="row">
 	  				<div class="col-3 mb-4">
-	  					<input type="text" class="form-control" placeholder="Nombre" th:name="nombreCliente">
+	  					<input type="text" class="form-control" placeholder="Nombre" id="nombreCliente" th:name="nombreCliente" required>
 	  				</div>
 	  				<div class="col-3 mb-4">
-	  					<input type="text" class="form-control" placeholder="Primer Apellido" th:name="apellido1Cliente">
+	  					<input type="text" class="form-control" placeholder="Primer Apellido" id="apellido1Cliente" th:name="apellido1Cliente" required>
 	  				</div>
 	  				<div class="col-3 mb-4">
-	  					<input type="text" class="form-control" placeholder="Segundo Apellido" th:name="apellido2Cliente">
+	  					<input type="text" class="form-control" placeholder="Segundo Apellido" id="apellido2Cliente" th:name="apellido2Cliente" required>
 	  				</div>
 				</div>
 				<div class="row">
 					<div class="col-9 mb-4">
-						<textarea class="form-control" th:name="observacionesCliente"></textarea>
+						<textarea class="form-control" placeholder="Descripcion Opcional" id="observacionesCliente" th:name="observacionesCliente"></textarea>
 					</div>
 				</div>
 				
@@ -165,10 +165,10 @@
 				<div id="platos">
 					<div class="row" id="infoPlato-0">
 		  				<div class="col-3 mb-4">
-		  					<input type="text" class="form-control" placeholder="Plato" name="nombrePlato[]" required>
+		  					<input type="text" class="form-control" placeholder="Plato" id="plato1" name="nombrePlato[]" required>
 		  				</div>
 		  				<div class="col-3 mb-4">
-		  					<input type="number" class="form-control" placeholder="Importe" name="importePlato[]" required>
+		  					<input type="number" class="form-control" placeholder="Importe" id="importe1" name="importePlato[]" required>
 		  				</div>
 					</div>
 				</div>

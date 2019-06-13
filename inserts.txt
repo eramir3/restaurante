@@ -1,3 +1,5 @@
+-- El motor de base de datos es Postgresql
+
 
 -- Camareros
 INSERT INTO camarero (nombre, apellido1, apellido2) VALUES ('Francisco Javier', 'Grau', 'Cano');
